@@ -17,7 +17,7 @@ namespace ILConvert
         //Console.WriteLine("Empty clipboard.");
         return;
       }
-      string Instruction = Clipboard.GetText();
+      string Instruction = Clipboard.GetText().Trim();
       var Instructions =
         ILCodesTable.codesTable.Where(x => x.InstructionHash == Instruction);
       ILCode ilCode;
